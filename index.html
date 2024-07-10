@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento Facial</title>
+    
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="face-api.min.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+}
+
+.video-container {
+    position: relative;
+    display: inline-block;
+}
+
+video, canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+canvas {
+    top: 0;
+    left: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: nowrap; 
+    }
+    nav li {
+        margin-right: 10px; 
+    }
+}
+.header {
+  background-color: #333;  
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0; 
+  width: 100%; 
+  z-index: 1; 
+}
+
+.header img {
+  width: 100px; 
+  height: 100px; 
+  margin: 0 auto;
+}
+    </style>
+</head>
+<header class="header">
+    <img src="logo.png" alt="Logo"> 
+</header>
+<body class="d-flex align-items-center justify-content-center bg-dark">
+    
+    <div class="container text-center">
+        
+        <h1 class="text-white mb-4">Bienvenido a la UT</h1>
+        <div id="mensaje"></div>
+        <div class="video-container position-relative">
+            <video id="video" autoplay muted class="border rounded" width="100%" height="auto"></video>
+            <canvas id="overlay" class="position-absolute"></canvas>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+</body>
+<nav class="navbar fixed-bottom justify-content-center">
+    <ul class="nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Acceso</a></li>
+      <li class="nav-item"><a class="nav-link" href="consulta.html">Consultas</a></li>
+    </ul>
+</nav>
+  
+</html>
